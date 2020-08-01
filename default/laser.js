@@ -1,0 +1,4 @@
+/*
+    Laser the player shoots out.
+    Will destroy any UFO it touches.
+*/
