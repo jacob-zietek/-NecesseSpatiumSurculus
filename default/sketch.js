@@ -20,7 +20,7 @@ function setup() { // Sets up variables to run game
   ufoImg = loadImage('ufo-icon.png');
   gameScore = 0;
   gameState = "active";
-  //cnv.hide();
+  cnv.hide();
 }
 
 function draw() {
@@ -66,6 +66,7 @@ function draw() {
 function mousePressed() {
   if(gameState == "gameOver"){ // Restarts game on game over screen
     setup();
+    cnv.show();
   }
   battleship.shoot();
 }

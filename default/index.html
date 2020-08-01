@@ -17,10 +17,18 @@
   <script type="text/javascript" src="drop.js"></script>
   <script type="text/javascript" src="battleship.js"></script>
   <script type="text/javascript" src="enemy.js"></script>
+  <script>
+		window.onload = function () {
+			{
+				cnv.hide();
+			}
+		}
+	</script>
 </head>
 
 <body>
   <main>
+    <button type="button" id="startingButton" onclick="setup();cnv.show();document.getElementById('startingButton').style.display='none';">Click Me!</button>
   </main>
 </body>
 
