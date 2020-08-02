@@ -17,9 +17,7 @@ function Enemy(){
 
         // Uses tensorflow's toxicity model to update y position
 
-        var num = (int)(random(0,6));
-        //console.log(MLModelOutput);
-        if(MLModelOutput != undefined && MLModelOutput[1]["results"][num]["match"])
+        if(MLModelOutput != undefined && MLModelOutput[1]["results"][(int)(random(0,MLModelOutput[1]["results"].length-1))]["match"])
             this.y = this.y + 1;
         else 
             this.y = this.y - 1;
