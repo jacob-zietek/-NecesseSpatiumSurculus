@@ -26,13 +26,75 @@
 	</script>
 </head>
 
-<body>
-  <main>
-    <button type="button" id="startingButton" onclick="setup();
-    cnv.show();
-    document.getElementById('startingButton').style.display='none';
-    ">Click Me!</button>
-  </main>
-</body>
+<div id="homePage">
+  <head>
+		<meta charset="UTF-8">
+		<title>Interphase by TEMPLATED</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body class="landing">
+
+		<!-- Banner -->
+			<section id="banner">
+				<h2>This is Necesse Spatium Surculus</h2>
+				<p>Bottom Text</p>
+				<ul class="actions">
+					<li>
+						<a href="#" class="button big" onclick="
+            setup();
+            cnv.show();
+            document.getElementById('homePage').style.display='none';
+            ">Play</a>
+					</li>
+				</ul>
+			</section>
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<div class="row">
+						<section class="4u 6u(medium) 12u$(small)">
+              <p>Thanks for scrolling this far.</p>
+						</section>
+						<section class="4u 6u$(medium) 12u$(small)">
+						</section>
+						<section class="4u$ 12u$(medium) 12u$(small)">
+							<h3>Contact me</h3>
+							<ul class="icons">
+								<li><a href="https://www.linkedin.com/in/jacob-zietek-4a7b5b190/" class="icon rounded fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="tabular">
+								<li>
+									<h3>Mail</h3>
+									<a href="#">xoqcpn@gmail.com</a>
+								</li>
+								<li>
+									<h3>Phone</h3>
+									(631) 983 7322
+								</li>
+							</ul>
+						</section>
+					</div>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li>
+						<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+						<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+					</ul>
+				</div>
+			</footer>
+	</body>
+</div>
 
 </html>
