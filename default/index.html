@@ -4,23 +4,44 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Why? A space shooter.</title>
+  <title>NecesseSpatiumSurculus</title>
   <style>
     body {
       padding: 0;
       margin: 0;
     }
   </style>
-  <script src="../p5.js"></script>
-  <script src="../addons/p5.sound.min.js"></script>
+  <script src="p5.js"></script>
   <script src="sketch.js"></script>
   <script type="text/javascript" src="drop.js"></script>
   <script type="text/javascript" src="battleship.js"></script>
   <script type="text/javascript" src="enemy.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/toxicity"></script>
   <script>
+    var MLModelOutput;
 		window.onload = function () {
 			{
-				cnv.hide();
+        toxicity.load(0.5).then(model => {
+          const sentences = ['you suck',
+          'this is dumb',
+          'I\'m on two cans of redbull :)',
+          'It is currently 2:41 am and this is due in 6 hours',
+          'No sleep until this is done',
+          'Man, I really need to sleep',
+          'Oh, he on X games mode',
+          'I really hate JavaScript sometimes',
+          'frick! Ur bad at this'];
+          model.classify(sentences).then(predictions => {
+            // `predictions` is an array of objects, one for each prediction head,
+            // that contains the raw probabilities for each input along with the
+            // final prediction in `match` (either `true` or `false`).
+            // If neither prediction exceeds the threshold, `match` is `null`.
+            MLModelOutput = predictions;
+          });
+        });
+
+        cnv.hide();
 			}
 		}
 	</script>

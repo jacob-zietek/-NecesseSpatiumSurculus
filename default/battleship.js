@@ -37,7 +37,7 @@ function Battleship(){
                         this.burnOut = true;
                         this.shootTimer = 0;
                     }
-                    console.log(shootTimer);
+                    //console.log(shootTimer);
                 }
             break;
             

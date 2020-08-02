@@ -14,6 +14,16 @@ function Enemy(){
 
     this.update = function(){
         this.x = this.x - this.vel;
+
+        // Uses tensorflow's toxicity model to update y position
+
+        var num = (int)(random(0,6));
+        //console.log(MLModelOutput);
+        if(MLModelOutput != undefined && MLModelOutput[1]["results"][num]["match"])
+            this.y = this.y + 1;
+        else 
+            this.y = this.y - 1;
+        
         // Checks for collision w/ player. Standard AABB-AABB collison detection
         // @TODO add deadzones, neither objects are perfect AABBs
         if((this.x+64 > battleship.x-128 && this.x < battleship.x+128) && (this.y < battleship.y+64 && this.y+64 > battleship.y-64)){
