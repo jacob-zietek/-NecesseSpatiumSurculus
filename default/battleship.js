@@ -22,7 +22,7 @@ function Battleship(){
     this.unshoot = function(){
         console.log("unpew!");
         this.shootState = false;
-        shootTimer=0;
+        shootTimer = 0;
     };
 
     this.update = function(){
